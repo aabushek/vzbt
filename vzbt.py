@@ -77,20 +77,16 @@ def repeat_all_messages(message): # Название функции не игр�
 
     if message.text == 'crime':
         text = 'Идеальное преступление: ' + str(booking_now('http://vzaperti.com.ua/quest/crime'))
-        log(message, text)
         bot.send_message(message.chat.id, text)
     elif message.text == 'empire':
         text = 'Подпольная империя: ' + str(booking_now('http://vzaperti.com.ua/quest/empire'))
-        log(message, text)
         bot.send_message(message.chat.id, text)
 
     elif message.text =='count':
         text = 'Количество броней \nПодпольная империя: '+ str(booking_all('http://vzaperti.com.ua/quest/empire'))+'\nИдеальное преступление: '+str(booking_all('http://vzaperti.com.ua/quest/crime'))
-        log(message, text)
         bot.send_message(message.chat.id, text)
     else:
         text = 'ну'
-        log(message, text)
         bot.send_message(message.chat.id, text)
 if __name__ == '__main__':
     bot.polling(none_stop=True)
