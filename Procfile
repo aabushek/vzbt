@@ -1,1 +1,1 @@
-web: python vzbt.py
+worker: python vzbt.py
