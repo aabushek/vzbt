@@ -1,3 +1,6 @@
+﻿#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import urllib
 from bs4 import BeautifulSoup
 import datetime
