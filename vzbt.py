@@ -1,7 +1,7 @@
 ﻿#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import urllib as ul
+from urllib import request
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
@@ -54,7 +54,7 @@ def booking_all(url):
     bl = []
     boking_list = []
     count = 0
-    url_request = ul.request.urlopen(url)
+    url_request = request.urlopen(url)
     url_read = url_request.read()
     soup = BeautifulSoup(url_read, "html.parser")
     t = soup.find_all('script')
