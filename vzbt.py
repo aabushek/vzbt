@@ -69,7 +69,9 @@ def booking_all(url):
 
     for i in range (len(boking_list)):
         ts = boking_list[i].split(',')[2].split(':')[1].replace('"','')
-        bl.append(time.ctime(int(ts)))
+        ts = int(ts)+(3*60*60)
+        bl.append(time.ctime(ts))
+
 
 
     return bl
